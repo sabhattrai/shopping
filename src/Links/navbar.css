@@ -1,0 +1,42 @@
+.main_navbar {
+   padding:1rem;
+  border-bottom:1px solid;
+  box-shadow: 5px 5px 5px wheat;
+  background-color: whitesmoke;
+  display:flex;
+  justify-content: space-between;
+}
+
+.container a {
+  margin-right: 20px;
+}
+
+a{
+  text-decoration: none;
+  font-size: larger;
+}
+a:hover{
+color:#0044ff;
+}
+
+.with_number{
+  padding-left: 8px;
+  background-color: aqua;
+  width: 125px;
+  border: 1px solid;
+  border-radius: 50px;
+  display: flex;
+  gap: 5px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.with_number button{
+
+  width: 100px;
+  font-size: large;
+  background-color: aqua;
+  border: none;
+ 
+}

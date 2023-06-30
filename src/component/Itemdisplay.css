@@ -1,0 +1,31 @@
+.main_container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid;
+  width: 200px;
+  gap: 5px;
+}
+.main_container img {
+  height: 200px;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  width: 100px;
+  font-size: large;
+}
+
+.btn {
+  margin-left: 50px;
+}
+.bth:hover {
+  background-color: wheat;
+}
