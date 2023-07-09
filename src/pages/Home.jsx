@@ -7,10 +7,11 @@ const Home = () => {
   return (
     <div>
       <h1>Home page </h1>
-      <div className='Item_image'>
+      <div className='Item_image' key={Item.id}>
+       
         {
           Item.map(Item=>(
-         <Itemdisplay key={Item.id} image={Item.imgUrl} price={Item.price} item={Item}/>
+         <Itemdisplay num={Item.id} image={Item.imgUrl} price={Item.price}/>
           ))
         }
       </div>

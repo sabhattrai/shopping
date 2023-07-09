@@ -1,9 +1,10 @@
 import React from 'react'
 import "./store.css"
 import { useContext } from 'react'
-import { CounterContex } from '../contex/CounterContex'
+import { CounterContex, SoppingItem } from '../contex/CounterContex'
 const Store = () => {
   const {cart,setCart}=useContext(CounterContex)
+
   return (
     <div className='store_main'>
     <div className='title'>

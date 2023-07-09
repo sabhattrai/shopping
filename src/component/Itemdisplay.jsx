@@ -1,16 +1,15 @@
-import React,{useState,useContext, useEffect} from 'react'
+import React,{useState,useContext} from 'react'
 import "./itemdisplay.css"
-import { CounterContex } from '../contex/CounterContex'
-const Itemdisplay = (props) => {
-  let numb=1
+import { CounterContex, SoppingItem } from '../contex/CounterContex'
+const Itemdisplay = ({num,price,image}) => {
     const {cart,setCart}=useContext(CounterContex)
+    const {additem}=useContext(SoppingItem)
     const[name,setName]=useState("add to cart")
     const [toggle,setToggle]=useState(1)
- useEffect(()=>{
-    localStorage.setItem("toggle",JSON.stringify(toggle))
-  },[toggle])
-    const btn_name=()=>{
+ 
+    const btn_name=(num)=>{
         setToggle(toggle*-1)
+            
         if (toggle===1){
             setCart(cart+1)
             setName("remove")
@@ -19,13 +18,15 @@ const Itemdisplay = (props) => {
         setCart(cart-1)
         setName("add to cart")
         }
-    }
+        additem(num)
+
+    };
   return (
-    <div className='main_container' key={props.key}>
-      <img src={props.image} />   
-      <h1 className='h1'>price ${props.price}</h1>     
+    <div className='main_container' key={num}>
+      <img src={image} />   
+      <h1 className='h1'>price ${price}</h1>     
       <button type='button' className='btn' onClick={()=>{
-      btn_name()
+      btn_name(num)
       }}>{name}</button>
     </div>
   )
